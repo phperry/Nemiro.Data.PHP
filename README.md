@@ -128,7 +128,11 @@ The query is executed by the **ExecuteScalar** method, which returns the ID of a
 $client = new MySql();
 
 // create a new command
-$client->Command = new DBCommand('INSERT INTO users (username, date_created) VALUES (@username, @date_created)');
+$client->Command = new DBCommand
+(
+	'INSERT INTO users (username, date_created) '.
+	'VALUES (@username, @date_created)'
+);
 
 // @username and @date_created is parameters name, 
 // add a values for this parameters
@@ -150,7 +154,12 @@ $client = new MySql();
 // create commands
 $firtCommand = new DBCommand('SELECT * FROM users WHERE is_blocked = 0');
 
-$secondCommand = new DBCommand('SELECT * FROM messages WHERE id_users IN (SELECT id_users FROM users WHERE is_blocked = 0) AND subject LIKE @search_subject');
+$secondCommand = new DBCommand
+(
+	'SELECT * FROM messages WHERE id_users IN '.
+	'(SELECT id_users FROM users WHERE is_blocked = 0) AND '.
+	'subject LIKE @search_subject'
+);
 $secondCommand->Parameters->Add('@search_subject', '%hello%');
 
 $thirdCommand = 'SELECT * FROM files';

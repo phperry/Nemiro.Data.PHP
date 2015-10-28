@@ -1,6 +1,6 @@
 ﻿### Nemiro.Data.PHP
 
-**Nemiro.Data.PHP** это небольшой набор вспомогательных классов для работы с базами данных **MySql** and **PostgreSQL**.
+**Nemiro.Data.PHP** это небольшой набор вспомогательных классов для работы с базами данных **MySql** и **PostgreSQL**.
 
 Работа с базами данных осуществляется всего пятью простыми методами: **ExecuteNonQuery**, **ExecuteScalar**, **GetData**, **GetTable** and **GetRow**.
 
@@ -68,9 +68,9 @@ define('PGSQL_DB_MODE', 1);
 
 Константа **DB_MODE** может иметь одну из следующих значений:
 
-* 0 - ручной режим; программист вручную закрывает соединение с БД методом **Disconnect**;
-* 1 - автоматический режим; соединение автоматически открывается и закрывается при каждом запросе к базе данных;
-* 2 - умный (рекомендуется); соединение закрывается в момент завершения жизненного цикла экземпляра класса-клиента.
+* 0 - ручной режим - программист вручную закрывает соединение с БД методом **Disconnect**;
+* 1 - автоматический режим - соединение автоматически открывается и закрывается при каждом запросе к базе данных;
+* 2 - умный (рекомендуется) - соединение закрывается в момент завершения жизненного цикла экземпляра класса-клиента.
 
 Любые параметры можно переопределить отдельно, при инициализации конкретного экземпляра класса-клиента.
 
@@ -91,7 +91,7 @@ require_once './Nemiro/Data/MySql.php';
 require_once './Nemiro/Data/PgSql.php';
 ```
 
-Обратите внимание, нужно указывать тот путь, где у вас расположены файлы классов библиотеки **Nemiro.Data.PHP**.
+Обратите внимание, нужно указывать тот путь, по которому у вас расположены файлы классов библиотеки **Nemiro.Data.PHP**.
 
 #### Импорт пространств имен и классов
 
@@ -151,7 +151,11 @@ echo '</pre>';
 $client = new MySql();
 
 // создаем команду
-$client->Command = new DBCommand('INSERT INTO users (username, date_created) VALUES (@username, @date_created)');
+$client->Command = new DBCommand
+(
+	'INSERT INTO users (username, date_created) '.
+	'VALUES (@username, @date_created)'
+);
 
 // @username и @date_created - это параметры запроса, 
 // добавляем их в команду и указываем нужные значения
@@ -175,7 +179,12 @@ $client = new MySql();
 // создаем команду 1
 $firtCommand = new DBCommand('SELECT * FROM users WHERE is_blocked = 0');
 // создаем команду 2
-$secondCommand = new DBCommand('SELECT * FROM messages WHERE id_users IN (SELECT id_users FROM users WHERE is_blocked = 0) AND subject LIKE @search_subject');
+$secondCommand = new DBCommand
+(
+	'SELECT * FROM messages WHERE id_users IN '.
+	'(SELECT id_users FROM users WHERE is_blocked = 0) AND '.
+	'subject LIKE @search_subject'
+);
 $secondCommand->Parameters->Add('@search_subject', '%hello%');
 // создаем команду 3
 $thirdCommand = 'SELECT * FROM files';

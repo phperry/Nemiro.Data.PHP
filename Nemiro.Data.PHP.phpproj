@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Nemiro.Data.PHP</Name>
+    <ProjectGuid>2bd1cf01-27a4-4786-b0bd-cb8fb54f6d98</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Nemiro.Data.PHP</RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>Nemiro.Data.PHP</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionMode.php" />
+    <Compile Include="DBCommand.php" />
+    <Compile Include="DBParameter.php" />
+    <Compile Include="DBParameterCollection.php" />
+    <Compile Include="DBParameterType.php" />
+    <Compile Include="IDBClient.php" />
+    <Compile Include="Import.php" />
+    <Compile Include="MySql.php" />
+    <Compile Include="PGException.php" />
+    <Compile Include="PgSql.php" />
+    <Compile Include="PgStmt.php" />
+    <Compile Include="samples\config.php" />
+    <Compile Include="samples\index.php" />
+    <Compile Include="TDBClient.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="samples\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE" />
+    <Content Include="README.RU.md" />
+    <Content Include="README.md" />
+    <Content Include="Release Notes.md" />
+  </ItemGroup>
+</Project>

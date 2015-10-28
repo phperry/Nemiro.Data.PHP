@@ -18,7 +18,7 @@ The classes allow you to use parameterized queries, which makes working with dat
 
 ### System Requirements
 
-* PHP PHP 5 >= 5.3;
+* PHP 5 >= 5.3;
 * MySQL >= 5.6.
 * PostgreSQL >= 7.4.
 

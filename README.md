@@ -43,7 +43,7 @@ By default, classes use the database connection settings of the following consta
 ```PHP
 // MySql
 define('MYSQL_DB_NAME', '%your database name here%');
-define('MYSQL_DB_USER', '%your database usernamename here%');
+define('MYSQL_DB_USER', '%your database username here%');
 define('MYSQL_DB_PASSWORD', '%your database password here%');
 define('MYSQL_DB_HOST', 'localhost');
 define('MYSQL_DB_PORT', 3306);
@@ -51,7 +51,7 @@ define('MYSQL_DB_MODE', 2);
 
 // PostgreSQL
 define('PGSQL_DB_NAME', '%your database name here%');
-define('PGSQL_DB_USER', '%your database usernamename here%');
+define('PGSQL_DB_USER', '%your database username here%');
 define('PGSQL_DB_PASSWORD', '%your database password here%');
 define('PGSQL_DB_HOST', 'localhost');
 define('PGSQL_DB_PORT', 5432);

@@ -28,6 +28,14 @@
     <Compile Include="PgSql.php" />
     <Compile Include="PgStmt.php" />
     <Compile Include="samples\config.php" />
+    <Compile Include="samples\mysql_getrow.php" />
+    <Compile Include="samples\mysql_getdata.php" />
+    <Compile Include="samples\pg_connstr.php" />
+    <Compile Include="samples\mysql_gettable.php" />
+    <Compile Include="samples\pg_insert_get_id.php" />
+    <Compile Include="samples\pgsql_simply.php" />
+    <Compile Include="samples\mysql_simply.php" />
+    <Compile Include="samples\mysql_insert_get_id.php" />
     <Compile Include="samples\index.php" />
     <Compile Include="TDBClient.php" />
   </ItemGroup>

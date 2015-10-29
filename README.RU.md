@@ -47,7 +47,7 @@
 // имя базы данных
 define('MYSQL_DB_NAME', '%your database name here%');
 // имя пользователя бд
-define('MYSQL_DB_USER', '%your database usernamename here%');
+define('MYSQL_DB_USER', '%your database username here%');
 // пароль пользователя бд
 define('MYSQL_DB_PASSWORD', '%your database password here%');
 // имя хоста сервера бд, в большинстве своем - localhost
@@ -59,7 +59,7 @@ define('MYSQL_DB_MODE', 2);
 
 // Константы для PostgreSQL
 define('PGSQL_DB_NAME', '%your database name here%');
-define('PGSQL_DB_USER', '%your database usernamename here%');
+define('PGSQL_DB_USER', '%your database username here%');
 define('PGSQL_DB_PASSWORD', '%your database password here%');
 define('PGSQL_DB_HOST', 'localhost');
 define('PGSQL_DB_PORT', 5432);

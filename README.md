@@ -1,4 +1,5 @@
-﻿### Nemiro.Data.PHP
+﻿### Nemiro.Data.PHP [![Latest Stable Version](https://poser.pugx.org/aleksey.nemiro/nemiro.data.php/v/stable)](https://packagist.org/packages/aleksey.nemiro/nemiro.data.php) [![Total Downloads](https://poser.pugx.org/aleksey.nemiro/nemiro.data.php/downloads)](https://packagist.org/packages/aleksey.nemiro/nemiro.data.php) [![License](https://poser.pugx.org/aleksey.nemiro/nemiro.data.php/license)](https://packagist.org/packages/aleksey.nemiro/nemiro.data.php)
+
 
 **Nemiro.Data.PHP** is a small set of utility classes for working with databases **MySql** and **PostgreSQL**.
 

@@ -2,7 +2,7 @@
 	"name":        "aleksey.nemiro/nemiro.data.php",
 	"description": "The small helper classes for working with databases MySql and PostgreSQL. ",
 	"keywords":    ["PHP", "MySql", "PostgreSQL", "PgSql", "data", "database"],
-	"homepage":    "https://github.com/alekseynemiro/Nemiro.Data.PHP.git",
+	"homepage":    "https://github.com/alekseynemiro/Nemiro.Data.PHP",
 	"license":     "Apache License 2.0",
 	"version":     "2.0",
 	"authors":     [
